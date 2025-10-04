@@ -7,7 +7,7 @@ public class Carro {
     int ano;
 
     double velocidadeAtual = 0;
-    boolean motorLigado = false;
+    boolean motorLigado = true;
 
 
     //Métodos
