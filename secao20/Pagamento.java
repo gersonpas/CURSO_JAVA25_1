@@ -10,7 +10,6 @@ interface Pagamento {
         System.out.println("Recibo do pagamento, com valor de R$" + valor);
     }
 
-
 }  
 
 

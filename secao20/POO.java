@@ -33,7 +33,14 @@ public class POO {
 
         // 7  -  Interfaces 
 
-        
+        Pagamento cartao = new CartaoCredito();
+        Pagamento transfer = new TransferenciaBancaria();
+
+        cartao.processarPagamento(100);
+        transfer.exibirRecibo(100);
+
+        transfer.processarPagamento(500);
+        transfer.exibirRecibo(500);
 
     }
 }
