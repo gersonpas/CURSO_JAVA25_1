@@ -1,6 +1,6 @@
 package secao20;
 
-public class Bateria extends InnerInstrumentoMusical {
+public class Bateria extends InstrumentoMusical {
     public Bateria(String nome){
         super(nome);
     }

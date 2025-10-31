@@ -1,14 +1,14 @@
 package secao20;
 
-    abstract class InnerInstrumentoMusical {
+    abstract class InstrumentoMusical {
     
         protected String nome;
 
-        public InnerInstrumentoMusical(String nome){
+       public InstrumentoMusical(String nome){
             this.nome = nome;
         }
         // Abstrato: Tem que ser implementado na subclasse
-        public abstract void tocar();
+           public abstract void tocar();
 
         // Concreto pode ser herdado
 

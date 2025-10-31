@@ -22,14 +22,15 @@ public class POO {
         System.out.println(funcionario.calcularBonus());
 
         // 6 - Classe Abstrata
-        InnerInstrumentoMusical violao = new Violao("Violão");
-        InnerInstrumentoMusical bateria = new Bateria("Bateria");
+        InstrumentoMusical violao = new Violao("Violão");
+        InstrumentoMusical bateria = new Bateria("Bateria");
+        InstrumentoMusical violino = new Violino("Violino");
 
         violao.exibirDetalhes();
-        bateria.exibirDetalhes();
+        bateria.exibirDetalhes();        
 
         violao.tocar();
-        bateria.tocar();
+        bateria.tocar();        
 
         // 7  -  Interfaces 
 
@@ -41,6 +42,11 @@ public class POO {
 
         transfer.processarPagamento(500);
         transfer.exibirRecibo(500);
+
+        //  10 -  Polimorfismo 
+        // Classes abstratas ou interfaces -> sobreescrever os métodos destas superclasses
+        violino.exibirDetalhes();
+        violino.tocar();
 
     }
 }

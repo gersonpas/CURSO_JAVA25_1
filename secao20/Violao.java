@@ -1,7 +1,7 @@
 package secao20;
 
 // Não tem uma herança propriamente dita
-public class Violao extends InnerInstrumentoMusical {
+public class Violao extends InstrumentoMusical {
     public Violao(String nome){
         super(nome);
     }
