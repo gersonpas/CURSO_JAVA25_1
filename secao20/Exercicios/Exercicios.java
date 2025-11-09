@@ -10,11 +10,20 @@ public class Exercicios {
         pessoa.exibirInfo();
          System.out.println(endereco.getEnderecoCompleto());
          System.out.println();
+
+         //Exercício 2
          Carros carro = new Carros();
          Moto moto = new Moto();
          carro.acelerar();
          moto.acelerar();
+         System.out.println();
 
+         //Exercício 3
+        Cachorro bob = new Cachorro("Maia", "Latido", "Caramelo");
+        bob.exibirDetalhes();
+        //bob.emitirSom();
+        System.out.println();
+        
     }
     
 }
