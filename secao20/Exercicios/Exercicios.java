@@ -1,5 +1,6 @@
 package secao20.Exercicios;
 
+
 public class Exercicios {
 
     public static void main(String[] args) {
@@ -7,7 +8,12 @@ public class Exercicios {
         Pessoa pessoa = new Pessoa("Fulano ", 35, endereco);
         
         pessoa.exibirInfo();
-        // System.out.println(endereco.getEnderecoCompleto());
+         System.out.println(endereco.getEnderecoCompleto());
+         System.out.println();
+         Carros carro = new Carros();
+         Moto moto = new Moto();
+         carro.acelerar();
+         moto.acelerar();
 
     }
     

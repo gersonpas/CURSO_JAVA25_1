@@ -12,7 +12,7 @@ public class Carro {
 
     //Métodos
 
-    void acelerar(){
+    public void acelerar(){
         System.out.println("Estamos acelerando o carro!");
     }
 
