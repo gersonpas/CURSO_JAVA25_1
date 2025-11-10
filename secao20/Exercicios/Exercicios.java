@@ -23,7 +23,18 @@ public class Exercicios {
         bob.exibirDetalhes();
         //bob.emitirSom();
         System.out.println();
+
+        //Exercício 4
+        System.out.println("Exercício 4 - Seção 20");
+        FuncionarioTempoIntegral fti = new FuncionarioTempoIntegral("Ana", 4000);
+        FuncionarioMeioPeriodo fmp = new FuncionarioMeioPeriodo("Francisco", 50, 120);
+        System.out.println("Salario Ana: " + fti.calcularSalario());
+        System.out.println("Salario Francisco: " + fmp.calcularSalario());
         
+        fti.adicionarBeneficio("Plano de Saúde e VA");
+        fmp.adicionarBeneficio(" VA");
+        System.out.println();
+
     }
     
 }
