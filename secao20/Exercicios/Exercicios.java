@@ -31,10 +31,34 @@ public class Exercicios {
         System.out.println("Salario Ana: " + fti.calcularSalario());
         System.out.println("Salario Francisco: " + fmp.calcularSalario());
         
-        fti.adicionarBeneficio("Plano de Saúde e VA");
-        fmp.adicionarBeneficio(" VA");
+        fti.adicionarBeneficio("Plano de Saúde e VA.");
+        fmp.adicionarBeneficio(" Vale Alimentação.");
+        System.out.println();
+
+        //Exercício 5
+        System.out.println("Exercício 5 - Seção 20");
+        Pilotavel meuHidroAviao = new HidroAviao();
+        Navegavel meuBarco = new Barco();
+        Pilotavel meuAviao = new Aviao();
+
+        meuAviao.pilotar();
+        meuHidroAviao.pilotar();
+        meuBarco.navegar(); 
+        
+        operarVeiculo(meuAviao);
+        operarVeiculo(meuBarco);
+        //operarVeiculo(meuHidroAviao);
         System.out.println();
 
     }
-    
+
+    public static void operarVeiculo(Object veiculo){
+        if (veiculo instanceof Pilotavel) {         
+            System.out.println("Este veículo é pilotavel.");
+        }
+
+        if (veiculo instanceof Navegavel) {
+            System.out.println("Este veículo é navegavel.");
+        }
+    }
 }
