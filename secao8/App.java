@@ -9,7 +9,9 @@ import java.awt.event.ActionListener;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        JFrame janela = new JFrame();  // Cria a tela
+
+        // Cria a tela
+        JFrame janela = new JFrame();  
         JLabel labelUsuario = new JLabel("Usário: ");
         labelUsuario.setBounds(30,50,100,30);
         JTextField campoUsuario = new JTextField();
@@ -18,6 +20,7 @@ public class App {
         campoSenha.setBounds(30,180,150,30);
         JLabel labelSenha = new JLabel("Senha: ");
         labelSenha.setBounds(30,150,100,30);
+
         //Cria um botão
         JButton botalogar = new JButton("Login");
         botalogar.setBounds(30, 220, 80, 30);
