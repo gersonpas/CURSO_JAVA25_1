@@ -1,0 +1,9 @@
+Este é um arquivo
+
+com texto --  Atenção 
+
+que vai ser lido pelo Java 
+
+Gerson Araujo Nov/25.
+
+--------------------------------------------

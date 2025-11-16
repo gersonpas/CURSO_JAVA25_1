@@ -93,7 +93,7 @@ public class Erros {
 
         // não verificadas
         String texto = null;
-
+    
         // System.out.println(texto.length());
 
         // 4 - exceções com throw
@@ -123,6 +123,7 @@ public class Erros {
         }
 
         // 6 - throws em métodos
+        
 
         try {
             
