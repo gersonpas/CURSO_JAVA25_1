@@ -66,13 +66,20 @@ public class Arquivo {
             writer.write("Escrevendo em arquivo com o buffered");
             writer.newLine();
             writer.write("Escrevendo em arquivo com o buffered 2");
-            
+            writer.append("\nTestando");
+            writer.append("\nGerson Pereira de Araujo.");
 
         }catch (Exception e) {
 
             System.out.println("Erro ao escrever em arquivo: " + e.getMessage());           
 
         }
+
+
+
+
+
+
     }
    
 }
