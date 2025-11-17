@@ -75,10 +75,21 @@ public class Arquivo {
 
         }
 
+        // 3 => Serialização de Objetos.
+        Pessoa pessoa = new Pessoa("GorsenPAS", 46);
+        System.out.println(pessoa.getNome());
+        System.out.println("--------------------------------");
 
+        // Serialização  
+        // arquivos serializados tem a extensão  .ser
+        
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(currentDir + "pessoa.ser"))) {
+            
+        } catch (Exception e) {
+            System.out.println("Erro ao serializar objeto: " + e.getMessage());           
+            
 
-
-
+        }
 
     }
    
