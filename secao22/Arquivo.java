@@ -14,15 +14,14 @@ public class Arquivo {
 
         // Ler o arquivo linha por linha.
         String currentDir = System.getProperty("user.dir") + "\\secao22\\";
-        System.out.println("");
+        System.out.println("###########");
         System.out.println(currentDir);
-        System.out.println("");
+        System.out.println("##########");
 
 
-        try (FileReader reader = new FileReader(currentDir + "arquivo.txt")) {
-            
+        try (FileReader reader = new FileReader(currentDir + "arquivo.txt")) {            
             int caracter;
-          while ((caracter = reader.read()) != -1) {
+            while((caracter = reader.read()) != -1) {
             System.out.print((char)caracter);
             
           }
@@ -76,21 +75,43 @@ public class Arquivo {
         }
 
         // 3 => Serialização de Objetos.
+        System.out.println("----------Serialização de Objetos---------------");
         Pessoa pessoa = new Pessoa("GorsenPAS", 46);
-        System.out.println(pessoa.getNome());
-        System.out.println("--------------------------------");
 
-        // Serialização  
+        System.out.println(pessoa.getNome());
+        System.out.println(pessoa.getIdade());
+
+        // Serialização  => OUTPUT
         // arquivos serializados tem a extensão  .ser
         
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(currentDir + "pessoa.ser"))) {
-            
+            oos.writeObject(pessoa);
+            System.out.println("Objeto serializado com sucesso.");
+
         } catch (Exception e) {
             System.out.println("Erro ao serializar objeto: " + e.getMessage());           
+        }
+
+        System.out.println("--------------Deserializando objetos----------------");
+
+        // Deserialização => INPUT
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(currentDir + "pessoa.ser"))) {
+                     
+            Pessoa pessoa2 = (Pessoa) ois.readObject();
+
+            System.out.println("Nome: " + pessoa2.getNome());
+            System.out.println("Idade: " + pessoa2.getIdade() + "\n");
             
+        } catch (Exception e) {
+         System.out.println("Erro ao deserializar objeto: " + e.getMessage());           
 
         }
 
-    }
+        // 4 - Manipulação de arquivos Binários
+
+        System.out.println("Manipulação de arquivos Binários\r\n");
+
+   }
    
 }

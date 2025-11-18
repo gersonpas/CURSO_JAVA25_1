@@ -1,9 +1,8 @@
-Este é um arquivo
+Este eh um arquivo
 
-com texto --  Atenção 
+com texto --  Atencao 
 
 que vai ser lido pelo Java 
 
 Gerson Araujo Nov/25.
-
---------------------------------------------
++++++=====++++++======++++++===
