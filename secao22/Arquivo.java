@@ -4,13 +4,11 @@ import java.io.*;
 
 public class Arquivo {
     
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {       
 
         // 1 - Leitura de arquivos.
          // FileReader = caracter por caracter
         // BufferedReader = linha por linha
-
 
         // Ler o arquivo linha por linha.
         String currentDir = System.getProperty("user.dir") + "\\secao22\\";
@@ -86,31 +84,36 @@ public class Arquivo {
         
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(currentDir + "pessoa.ser"))) {
             oos.writeObject(pessoa);
-            System.out.println("Objeto serializado com sucesso.");
+            System.out.println("==> Objeto serializado com sucesso.");
 
         } catch (Exception e) {
             System.out.println("Erro ao serializar objeto: " + e.getMessage());           
         }
 
-        System.out.println("--------------Deserializando objetos----------------");
+        System.out.println("-----------Deserializando objetos----------------");
 
         // Deserialização => INPUT
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(currentDir + "pessoa.ser"))) {
                      
             Pessoa pessoa2 = (Pessoa) ois.readObject();
-
             System.out.println("Nome: " + pessoa2.getNome());
-            System.out.println("Idade: " + pessoa2.getIdade() + "\n");
+            System.out.println("Idade: " + pessoa2.getIdade());
+            System.out.println("==> Objeto Deserializado com sucesso.");
             
         } catch (Exception e) {
          System.out.println("Erro ao deserializar objeto: " + e.getMessage());           
 
         }
-
+        System.out.println("---------------------------------------------------"+ "\n");
         // 4 - Manipulação de arquivos Binários
 
         System.out.println("Manipulação de arquivos Binários\r\n");
+
+        
+
+
+
 
    }
    
