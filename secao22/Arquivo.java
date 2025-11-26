@@ -110,10 +110,22 @@ public class Arquivo {
 
         System.out.println("Manipulação de arquivos Binários\r\n");
 
-        
 
+        try (FileInputStream fis = new FileInputStream(currentDir + "foto_1977.jpg");
+            FileOutputStream fos = new FileOutputStream(currentDir + "copia_imagem2.png");    
+    
+    ) {          
+           
+            int byteData;
+            while ((byteData = fis.read()) != -1) {
+                fos.write(byteData);                
+            }
 
+                System.out.println("Arq copiado com sucesso.");
 
+        } catch (Exception e) {
+            System.out.println("Erro ao copiar arquivo.");
+        }       
 
    }
    
