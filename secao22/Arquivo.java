@@ -106,6 +106,7 @@ public class Arquivo {
 
         }
         System.out.println("---------------------------------------------------"+ "\n");
+        
         // 4 - Manipulação de arquivos Binários
 
         System.out.println("Manipulação de arquivos Binários\r\n");
@@ -124,8 +125,32 @@ public class Arquivo {
                 System.out.println("Arq copiado com sucesso.");
 
         } catch (Exception e) {
-            System.out.println("Erro ao copiar arquivo.");
-        }       
+            System.out.println("Erro ao copiar arquivo."+ e.getMessage());
+        }
+        
+        // 5 - Manipulação de arquivos de Vídeos
+        System.out.println("---------------------------------------------------"+ "\n");
+        
+        System.out.println("Manipulação de arquivos de Vídeos\r\n");
+
+        try (            
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(currentDir + "video.mkv"));            
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(currentDir + "copia_video.mkv"));
+    
+    ) {
+          byte[] buffer = new byte[1024]; // buffer 1kb em  1kb.
+          int bytesLidos;
+          while ((bytesLidos = bis.read(buffer)) != -1) {
+            bos.write(buffer,0, bytesLidos);                        
+          }
+
+          System.out.println("Vídeo copiado com sucesso.");
+            
+        } catch (Exception e) {
+            System.out.println("Erro ao copiar arquivo." + e.getMessage());
+
+        }
+        System.out.println("---------------------------------------------------"+ "\n");
 
    }
    
