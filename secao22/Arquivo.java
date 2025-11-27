@@ -1,6 +1,13 @@
 package secao22;
 
 import java.io.*;
+import java.nio.ByteBuffer;
+import javax.imageio.ImageIO;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 
 public class Arquivo {
     
@@ -151,6 +158,51 @@ public class Arquivo {
 
         }
         System.out.println("---------------------------------------------------"+ "\n");
+
+        // 6 - Manipulação de Imagens.
+        System.out.println("Manipulação de Imagens. \r\n");
+
+        try {
+            BufferedImage imagem = ImageIO.read(new File(currentDir + "copia_imagem2.png"));
+            if (imagem == null) {
+                System.out.println("A imagem não pode ser carregada.");
+                return;
+            }
+                Graphics2D g2d = imagem.createGraphics(); 
+                // Preparando o texto.
+                g2d.setFont(new Font("Arial", Font.BOLD, 50 ));
+                FontMetrics fm = g2d.getFontMetrics();
+                String texto = "Texto no Centro";
+
+                // Centralizar texto na imagem.
+                int larguraTexto = fm.stringWidth(texto);
+                int alturaTexto = fm.getHeight();
+                // Posionamento
+                int x = (imagem.getWidth() - larguraTexto) / 2;
+                int y = (imagem.getHeight() - alturaTexto) / 2 + fm.getAscent();
+                // desenhar retangulo no fundo do texto
+                g2d.setColor(Color.BLACK);
+                g2d.fillRect(x - 10, y - fm.getAscent(),larguraTexto + 20, alturaTexto);
+
+                // Desenhar o texto em cima do retangulo.
+                g2d.setColor(Color.YELLOW);
+                g2d.drawString(texto, x, y);
+
+                // Liberando recursos
+                g2d.dispose();
+
+                // Salvando a imagem.
+
+                File outputFile = new File(currentDir + "imagem_com_texto.png");
+                ImageIO.write(imagem, "png", outputFile);
+                System.out.println("Gerado um texto na imagem com sucesso.");
+
+                
+        } catch (Exception e) {
+            System.out.println("Erro ao manipular imagem." + e.getMessage());
+            
+
+        }
 
    }
    
