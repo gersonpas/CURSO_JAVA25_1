@@ -1,7 +1,7 @@
 package secao22;
 
 import java.io.*;
-import java.nio.ByteBuffer;
+//import java.nio.ByteBuffer;
 import javax.imageio.ImageIO;
 import java.awt.Color;
 import java.awt.Font;
@@ -160,6 +160,7 @@ public class Arquivo {
         System.out.println("---------------------------------------------------"+ "\n");
 
         // 6 - Manipulação de Imagens.
+
         System.out.println("Manipulação de Imagens. \r\n");
 
         try {
@@ -195,6 +196,7 @@ public class Arquivo {
 
                 File outputFile = new File(currentDir + "imagem_com_texto.png");
                 ImageIO.write(imagem, "png", outputFile);
+                
                 System.out.println("Gerado um texto na imagem com sucesso.");
 
                 
@@ -203,6 +205,7 @@ public class Arquivo {
             
 
         }
+        System.out.println("---------------------------------------------------"+ "\n");
 
    }
    
