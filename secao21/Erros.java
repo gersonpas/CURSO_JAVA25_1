@@ -87,10 +87,11 @@ public class Erros {
             BufferedReader reader = new BufferedReader(new FileReader("arquivo.txt"));
             String linha = reader.readLine();
             System.out.println(linha);
+            
         } catch (Exception e) {
             System.out.println("Erro ao ler arquivo: " + e.getMessage());
         }
-
+            
         // não verificadas
         String texto = null;
     
