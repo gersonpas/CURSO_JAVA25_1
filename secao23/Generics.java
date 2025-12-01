@@ -57,6 +57,8 @@ public class Generics {
         listaInteiros.add(10);
         listaInteiros.add(20);
         listaInteiros.add(30);
+        listaInteiros.add(40);
+
 
         for(Number numero : listaInteiros){
             System.out.println(numero);
@@ -65,12 +67,22 @@ public class Generics {
         Set<String> conjuntoDePalavras = new HashSet< >();
 
         conjuntoDePalavras.add("Java");
-        conjuntoDePalavras.add("Python");   
+        conjuntoDePalavras.add("JavaScript");   
         conjuntoDePalavras.add("C++");
 
         for(String palavra : conjuntoDePalavras){
             System.out.println(palavra);
         }
+
+        Map<Integer, String> mapaDeIdades = new HashMap< >();
+        mapaDeIdades.put(64, "Gerson");
+        mapaDeIdades.put(22, "Maria");
+        mapaDeIdades.put(37, "João");
+        
+        for(Map.Entry<Integer, String> entrada : mapaDeIdades.entrySet()){
+            System.out.println("Idade: " + entrada.getKey() + ", Nome: " + entrada.getValue());
+        }
+
     }
     
     public static <T extends Comparable<T>> T obterMaior(T valor1, T valor2){

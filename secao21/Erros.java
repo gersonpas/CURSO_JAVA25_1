@@ -83,8 +83,7 @@ public class Erros {
 
         // verificada
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("arquivo.txt"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("arquivo.txt"))) {
             String linha = reader.readLine();
             System.out.println(linha);
             
