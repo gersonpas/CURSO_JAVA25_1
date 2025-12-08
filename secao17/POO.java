@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class POO {
     public static void main(String[] args) {
-      Pessoa joao = new Pessoa();
+      Pessoa joao = new Pessoa(null, 0);
       ContaBancaria ContaDaAna = new ContaBancaria();
        ContaDaAna.setTitular("Ana");       
        ContaDaAna.setSaldo(-1000);
