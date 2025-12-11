@@ -84,12 +84,76 @@ public class Regex {
 
 
          }
+         // Backreference para substituição
+         // $1 = primeiro grupo, $2 = segundo grupo, $3 = terceiro grupo...
+            String textoSubstituido = texto.replaceAll("(\\d{2})-(\\d{2})-(\\d{4})", "$3/$2/$1");
+            System.out.println("Texto substituído: " + textoSubstituido);
 
-
-
-
-
+         // 4 - Avançando em pattern e matcher
+           
+         // correspondência parcial com lookingAt()
+            regex = "\\d{3}";
+            texto = "1234ABC456";
+            pattern = Pattern.compile(regex);
+            matcher = pattern.matcher(texto);
+            System.out.println("Correspodencia parcial com lookingAt()");
+            if(matcher.lookingAt()) {
+                System.out.println("Encontrado: " + matcher.group());
+            }
+            // contando grupos com groupCount()
+            // alem de contar os grupos, a regex precisa estar no texto alvo.
+            regex = "(\\d{3})-(\\d{3})-(\\d{3})"; 
+            texto = "123-456-712";
+            pattern = Pattern.compile(regex);
+            matcher = pattern.matcher(texto);
+            System.out.println("Contando grupos com groupCount()");
+            if             
+             (matcher.matches()) {
+                System.out.println("Total de grupos encontrados: " + matcher.groupCount());                
+                
+                for (int i = 0; i <= matcher.groupCount(); i++) {
+                    System.out.println("O Grupo " + i + " tem o valor de: " + matcher.group(i));
+            }
+                
       }
+
+      // start e end para obter posições das correspondências na string
+        regex = "\\d{3}";
+        texto = "O código é 123 e o outro é 456";
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(texto);
+        System.out.println("Posições das correspondências na string");
+        while(matcher.find()) {
+            System.out.println("Encontrado: " + matcher.group() + 
+            " Início: " + matcher.start() + 
+            " Fim: " + matcher.end());
+        }
+
+        // quote para tratar caracteres literais
+        String literalRegex = Pattern.quote("1 + 1 = 2");
+        String textoLiteral = "A expressão 1 + 1 = 2 é verdadeira.";
+
+        pattern = Pattern.compile(literalRegex);
+        matcher = pattern.matcher(textoLiteral);
+
+        System.out.println("Tratando caracteres literais com quote");
+        if (matcher.find()) {
+            System.out.println("Encontrado: " + matcher.group());
+            
+        }
+
+        // 5 - expressões regulares avançadas
+        // Positive lookahead (?=...)
+        regex = "\\d(?=px)";
+        texto = "10px 20em 30px 40%";
+        pattern = Pattern.compile(literalRegex);
+        matcher = pattern.matcher(texto);
+        System.out.println("Positive lookahead (?=...)");
+        while (matcher.find()) {
+            System.out.println("Encontrado: " + matcher.group());
+        }
+        
+
   }
 
-
+}
