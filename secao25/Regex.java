@@ -190,6 +190,40 @@ public class Regex {
         }
 
 
+        // Validando data e hora no formato dd/mm/aaaa hh:mm
+        String regexDataHora = "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})\\s(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$";
+        String[] datasEhHoras = {
+            "10/05/2023 14:30",
+            "31/12/2022 23:59",
+            "32/01/2023 10:00", // inválido
+            "15/13/2023 12:00", // inválido
+            "01/01/2023 24:00", // inválido
+            "05/05/2023 09:60"  // inválido
+        };
+        pattern = Pattern.compile(regexDataHora);
+        System.out.println("Validação de data e hora no formato dd/mm/aaaa hh:mm");
+        for (String dataEhHora : datasEhHoras) {
+            matcher = pattern.matcher(dataEhHora);
+            if (matcher.matches()) {
+                System.out.println(dataEhHora + " é válido.");
+            } else {
+                System.out.println(dataEhHora + " é inválido.");
+            }
+        }
+
+            // flags no Pattern
+        String regexFlags = "java";
+        texto = "Java é uma linguagem de programação. java é popular.";
+        pattern = Pattern.compile(regexFlags, Pattern.CASE_INSENSITIVE);
+        matcher = pattern.matcher(texto);
+        System.out.println("Usando flags no Pattern (CASE_INSENSITIVE)");
+        while (matcher.find()) {
+            System.out.println("Encontrado: " + matcher.group());
+        }
+        
+
+
+
     }
 
 
