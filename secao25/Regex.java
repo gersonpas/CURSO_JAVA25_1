@@ -143,17 +143,55 @@ public class Regex {
         }
 
         // 5 - expressões regulares avançadas
-        // Positive lookahead (?=...)
-        regex = "\\d(?=px)";
-        texto = "10px 20em 30px 40%";
-        pattern = Pattern.compile(literalRegex);
+        // Positive lookahead (?=...) -> do que a gente sinalizou para tras 
+        String regexLookAhead = "\\d+(?=\\$)"; // números seguidos de $
+        texto = "Preços: 100$ 200$ $300 $400";
+        pattern = Pattern.compile(regexLookAhead);
         matcher = pattern.matcher(texto);
-        System.out.println("Positive lookahead (?=...)");
+        System.out.println(" lookahead Positivo");
         while (matcher.find()) {
             System.out.println("Encontrado: " + matcher.group());
         }
         
+        // lookbehind positivo  -> para frente que a gente sinalizou
+        String regexLookBehind = "(?<=\\$)\\d+"; // números precedidos de $    
+        texto = "Preços: 100$ 200$ $300 $400";
+        pattern = Pattern.compile(regexLookBehind);
+        matcher = pattern.matcher(texto);
+        System.out.println(" lookabehind Positivo");
+        while (matcher.find()) {
+            System.out.println("Encontrado: " + matcher.group());
+        }
 
-  }
+
+        // Lookahead negativo (?!=...) -> não seguido do que a gente sinalizou
+        // p{L} -> qualquer letra de qualquer idioma => Código Unicode.
+        String regexLookAheadNeg = "\\b[\\p{L}]+\\b(?!\\.)"; // Palavras (w) sem ponto final
+        // \\b <- conceito de fronteira para pegar a palavra completa
+        //String regexLookAheadNeg = "\\b[\\wáéíóú]+\\b(?!\\.)"; // Palavras (w) sem ponto final
+
+        texto = "Esta é uma frase. Esta é outra frase sem ponto final";
+        pattern = Pattern.compile(regexLookAheadNeg);
+        matcher = pattern.matcher(texto);
+        System.out.println(" lookahead Negativo");
+        while (matcher.find()) {
+            System.out.println("Encontrado: " + matcher.group());
+
+        }
+
+        // Lookbehind negativo (?<!...) -> não precedido do que a gente sinalizou
+        texto = "#java #javascript #python csharp #ruby";
+        String regexLookBehindNeg = "(?<!#)\\b\\w+\\b"; // hashtags que não são precedidas por 'java'
+        pattern = Pattern.compile(regexLookBehindNeg);
+        matcher = pattern.matcher(texto);
+        System.out.println(" lookbehind Negativo");
+        while (matcher.find()) {
+            System.out.println("Encontrado: " + matcher.group());
+        }
+
+
+    }
+
 
 }
+
