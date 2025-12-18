@@ -1,5 +1,7 @@
 package secao26;
 
+
+
 public class Cachorro extends Animal {
 
     // warning não para a compilação
@@ -10,15 +12,13 @@ public class Cachorro extends Animal {
         System.out.println("O cachorro late");
     }
 
-    @SuppressWarnings("deprecation");
+    @SuppressWarnings("@Deprecated\r\n" + //
+                "")
     public void mover() {
         // Usando o método mover, que está marcado como @Deprecated
        System.out.println("Teste do método mover:");
        
         // Isso deve gerar um aviso de depreciação
     }
-
-
-
 
 }
