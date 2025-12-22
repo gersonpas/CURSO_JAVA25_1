@@ -24,6 +24,25 @@ public class CheckboxRadioButtonExample extends Application {
         VBox vbox = new VBox();
         vbox.getChildren().addAll(checkboxlabel,checkBox1, checkBox2);
 
+        // radio buttons
+        RadioButton rb1 = new RadioButton("Radio 1");
+        RadioButton rb2 = new RadioButton("Radio 2");
+        RadioButton rb3 = new RadioButton("Radio 3");
+
+        ToggleGroup group = new ToggleGroup();
+        rb1.setToggleGroup(group);
+        rb2.setToggleGroup(group);
+        rb3.setToggleGroup(group);
+
+        Label radiolabel = new Label("Radio selecionada");
+        
+
+        rb1.setOnAction(event -> updateRadioLabel(group, radiolabel));
+        rb2.setOnAction(event -> updateRadioLabel(group, radiolabel));
+        rb3.setOnAction(event -> updateRadioLabel(group, radiolabel));
+
+        vbox.getChildren().addAll(radiolabel, rb1, rb2, rb3);
+
         // Criando uma cena com o layout
         Scene scene = new Scene(vbox, 500, 500);
 
@@ -34,6 +53,16 @@ public class CheckboxRadioButtonExample extends Application {
         }
 
         
+    }
+
+    private Object updateRadioLabel(ToggleGroup group, Label radiolabel) {
+        RadioButton selectedRadioButton = (RadioButton) group.getSelectedToggle();
+        if (selectedRadioButton != null) {
+            radiolabel.setText("Radio selecionada: " + selectedRadioButton.getText());
+        } else {
+            radiolabel.setText("Nenhum Radio selecionado");
+        }
+        return null;
     }
 
     public void updateCheckboxLabel(CheckBox cb1, CheckBox cb2, Label label) {
