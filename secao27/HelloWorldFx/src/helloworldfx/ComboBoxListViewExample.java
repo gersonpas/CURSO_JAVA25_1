@@ -34,6 +34,12 @@ public class ComboBoxListViewExample extends Application {
         ObservableList<String> items = FXCollections.observableArrayList (
             "Item 1", "Item 2", "Item 3", "Item 4", "Item 5");
         ListView<String> listView = new ListView<>(items);
+        listView.setPrefHeight(150);
+        listView.getSelectionModel().selectedIndexProperty().addListener((obs, oldVal, newVal) -> {
+            String selected = listView.getSelectionModel().getSelectedItem();
+            comboBoxLabel.setText("Item selecionado da ListView: " + newVal);
+            listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        });
 
         VBox vbox = new VBox();
         vbox.getChildren().addAll(comboBoxLabel, comboBox, listView);
