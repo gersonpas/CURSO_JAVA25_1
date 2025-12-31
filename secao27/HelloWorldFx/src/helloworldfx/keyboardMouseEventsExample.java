@@ -14,7 +14,7 @@ public class keyboardMouseEventsExample extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         
-        Label label = new Label("Intejara com seu teclado");
+        Label label = new Label("Interaja com seu teclado");
 
         StackPane root = new StackPane();
 
