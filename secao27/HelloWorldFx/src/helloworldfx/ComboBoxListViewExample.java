@@ -24,11 +24,8 @@ public class ComboBoxListViewExample extends Application {
         comboBox.setOnAction(event -> {
             String selected = comboBox.getSelectionModel().getSelectedItem();
             comboBoxLabel.setText("Opção selecionada: " + selected);
-        });
-        
-        
-
-        
+        });     
+               
 
         // ListView Example
         ObservableList<String> items = FXCollections.observableArrayList (
@@ -37,7 +34,8 @@ public class ComboBoxListViewExample extends Application {
         listView.setPrefHeight(150);
         listView.getSelectionModel().selectedIndexProperty().addListener((obs, oldVal, newVal) -> {
             String selected = listView.getSelectionModel().getSelectedItem();
-            comboBoxLabel.setText("Item selecionado da ListView: " + newVal);
+            //int novoValor = newVal.intValue() + 1;
+            comboBoxLabel.setText("Item selecionado da ListView: " + " - " + selected);
             listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         });
 
@@ -51,14 +49,9 @@ public class ComboBoxListViewExample extends Application {
         // configuração do Stage
         primaryStage.setTitle("Exemplo VBox, HBox, Button e Label");
         primaryStage.setScene(scene);
-        primaryStage.show();
+        primaryStage.show();       
         
-
-        
-    }
-
-    
-
+    }   
 
     public static void main(String[] args) {
         launch(args);
