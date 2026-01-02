@@ -1,6 +1,5 @@
 package helloworldfx;
 
-
 import javafx.application.*;
 //import javafx.collections.FXCollections;
 //import javafx.collections.ObservableList;
@@ -10,40 +9,28 @@ import javafx.scene.layout.*;
 import javafx.stage.*;
 
 
-public class keyboardMouseEventsExample extends Application {
+public class CSSStylingExample extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         
-        Label label = new Label("Interação com seu teclado");
+        Label label = new Label("Label estilizada");
 
-        StackPane root = new StackPane();
+        label.getStyleClass().add("label-custom");
 
-        root.getChildren().add(label);
 
-        // capturar eventos de teclado
-        root.setOnKeyPressed(event -> {
-        
-            String key = event.getCode().toString();
+        Button button = new Button("Botão estilizado");
 
-            label.setText("Tecla pressionada: " + key);
+        button.getStyleClass().add("button-custom");
 
-        });
 
-        // evento de mouse
-        root.setOnMouseClicked(event -> {
+        VBox vbox = new VBox(10);
 
-            double x = event.getSceneX();
-            double y = event.getSceneY();
-
-            label.setText("Mouse clicado em X: " + x + " e Y : " + y);
-
-        });
+        vbox.getChildren().addAll(label, button);
 
         // Criando uma cena com o layout
-        Scene scene = new Scene(root, 500, 500);
+        Scene scene = new Scene(vbox, 500, 500);
 
-        // habilitar os eventos de tecla
-        scene.setOnKeyPressed(root.getOnKeyPressed());
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 
         // configuração do Stage
         primaryStage.setTitle("Exemplo VBox e HBox");
@@ -66,4 +53,3 @@ public class keyboardMouseEventsExample extends Application {
         launch(args);
     }
 }
-
