@@ -1,0 +1,166 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "helloworldfx.MainApp",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "SmoothAnimationExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.SmoothAnimationExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "CanvasExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.CanvasExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "ShapeDrawingExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.ShapeDrawingExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "ImageViewExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.ImageViewExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "AlertExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.AlertExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "keyboardMouseEventsExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.keyboardMouseEventsExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "VBoxHBoxExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.VBoxHBoxExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "TextFieldTextAreaExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.TextFieldTextAreaExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "StageSceneExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.StageSceneExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "StackPaneAnchorPaneExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.StackPaneAnchorPaneExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "MultipleWindowsExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.MultipleWindowsExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "GridPaneExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.GridPaneExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "ComboBoxListViewExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.ComboBoxListViewExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "CheckboxRadioButtonExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.CheckboxRadioButtonExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "CSSStylingExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.CSSStylingExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "ButtonLabelExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.ButtonLabelExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "ButtonClickExample",
+            "request": "launch",
+            "mainClass": "helloworldfx.ButtonClickExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "helloworldfx.Main",
+            "projectName": "CURSO_JAVA25_1_386f23b2",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

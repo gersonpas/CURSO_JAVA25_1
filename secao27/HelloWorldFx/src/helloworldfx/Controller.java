@@ -10,10 +10,7 @@ public class Controller {
     private Label label;
 
     public void initialize() {
-        String javaVersion = System.getProperty("java.version");
-        String javafxVersion = System.getProperty("javafx.version");
-        label.setText("Olá Mundo JavaFX!");
+       
+        label.setText("Olá Mundo JavaFX - GPAS 2026!");
     }
 }
-
-
