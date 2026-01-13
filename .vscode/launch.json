@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Regex",
+            "request": "launch",
+            "mainClass": "secao25.Regex",
+            "projectName": "CURSO_JAVA25_1_386f23b2"
+        },
+        {
+            "type": "java",
             "name": "MainApp",
             "request": "launch",
             "mainClass": "helloworldfx.MainApp",
