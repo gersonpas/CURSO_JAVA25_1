@@ -180,12 +180,9 @@
             "mainClass": "helloworldfx.Main",
             "projectName": "CURSO_JAVA25_1_386f23b2",
             "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
         }
+        
+            
+        
     ]
 }
