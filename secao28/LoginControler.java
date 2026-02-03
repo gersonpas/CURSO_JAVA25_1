@@ -20,7 +20,7 @@ public class LoginControler {
     void fazerLogin(ActionEvent event) {
         String usuario = campoUsuario.getText();
         String senha = campoSenha.getText();
-        if (usuario.equals("gerson") && senha.equals("123456")) {
+        if (usuario.equals("gerson") && senha.equals("123")) {
             System.out.println("Fez login com sucesso!");
         } else {
             System.out.println("Usuário ou senha inválidos!");

@@ -20,7 +20,7 @@ public void start(Stage primaryStage) throws Exception {
     Scene tela = new Scene(root);
 
     primaryStage.setScene(tela);
-    primaryStage.setTitle("Exemplo de Scene Builder");
+    primaryStage.setTitle("Tela de Login - JavaFX - Scene Builder");
     primaryStage.show();
 
 

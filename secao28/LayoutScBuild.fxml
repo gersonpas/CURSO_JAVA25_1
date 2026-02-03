@@ -63,7 +63,7 @@
             <TextField fx:id="campoSenha" layoutX="150.0" layoutY="217.0" prefHeight="25.0" prefWidth="133.0" />
             <Label layoutX="150.0" layoutY="118.0" text="Usuário" />
             <Label layoutX="150.0" layoutY="194.0" text="Senha" />
-            <Button fx:id="botaoLogin" layoutX="199.0" layoutY="277.0" mnemonicParsing="false" onAction="#fazerLogin" prefHeight="44.0" prefWidth="76.0" text="Entrar" />
+            <Button fx:id="botaoLogin" layoutX="153.0" layoutY="260.0" mnemonicParsing="false" onAction="#fazerLogin" prefHeight="44.0" prefWidth="76.0" text="Entrar" />
       </children>
     </AnchorPane>
       <TextField />

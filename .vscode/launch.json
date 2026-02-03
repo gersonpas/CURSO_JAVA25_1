@@ -6,12 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CheckboxRadioButtonExample",
+            "request": "launch",
+            "mainClass": "secao27.HelloWorldFx.src.helloworldfx.CheckboxRadioButtonExample",
+            "projectName": "CURSO_JAVA25_1_386f23b2"
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "helloworldfx.App",
             "projectName": "CURSO_JAVA25_1_386f23b2",
             "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
-
         },
         {
             "type": "java",
@@ -20,7 +26,6 @@
             "mainClass": "secao28.App",
             "projectName": "CURSO_JAVA25_1_386f23b2",
             "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
-
         },
         {
             "type": "java",
@@ -181,8 +186,5 @@
             "projectName": "CURSO_JAVA25_1_386f23b2",
             "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-21.0.9\\lib\" --add-modules javafx.controls,javafx.fxml"
         }
-        
-            
-        
     ]
 }
