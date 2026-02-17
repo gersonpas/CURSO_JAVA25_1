@@ -20,7 +20,7 @@ public class AlertExample extends Application {
         buttonInfo.setOnAction(event -> showAlert(AlertType.INFORMATION, "Informação", "Alerta de informação"));
         
 
-        Button buttonError = new Button("Alerta de Error");
+        Button buttonError = new Button("Alerta de Erro");
 
         buttonError.setOnAction(event -> showAlert(AlertType.ERROR, "Erro", "Alerta de Erro"));
         
@@ -52,8 +52,7 @@ public class AlertExample extends Application {
 
         alert.setTitle(title);
         alert.setHeaderText(null);
-        alert.setContentText(message);
-
+        alert.setContentText(message);               
         alert.showAndWait();
     }
 
