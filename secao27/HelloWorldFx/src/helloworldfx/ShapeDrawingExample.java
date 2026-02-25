@@ -41,7 +41,7 @@ public class ShapeDrawingExample extends Application {
         // configuração do Stage
         Scene scene = new Scene(vbox, 500, 500);
 
-        primaryStage.setTitle("Exemplo VBox e HBox");
+        primaryStage.setTitle("Exemplo de Desenho de Formas");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

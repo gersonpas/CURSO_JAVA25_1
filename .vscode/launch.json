@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "calculadoraImc",
+            "request": "launch",
+            "mainClass": "secao5.calculadoraImc",
+            "projectName": "CURSO_JAVA25_1_386f23b2"
+        },
+        {
+            "type": "java",
+            "name": "POO",
+            "request": "launch",
+            "mainClass": "secao20.POO",
+            "projectName": "CURSO_JAVA25_1_386f23b2"
+        },
+        {
+            "type": "java",
             "name": "CheckboxRadioButtonExample",
             "request": "launch",
             "mainClass": "secao27.HelloWorldFx.src.helloworldfx.CheckboxRadioButtonExample",
